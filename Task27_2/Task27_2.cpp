@@ -47,6 +47,14 @@ public:
     {
         std::cout << "Centre shapes X= " << x << " Y=" << y << std::endl;
     }
+    void describingRectangle(double width, double height)
+    {
+        srand(time(nullptr));
+        if(width!=height)
+            std::cout << "The described rectangle with  height " << height + std::rand() % 2+1 << " and width " << width + std::rand() % 2 + 1 << std::endl;
+        else
+            std::cout << "Square with side = " << width + std::rand() % 3 + 1 << std::endl;
+    }
 };
 class Circle :public Shapes  
 {
@@ -69,7 +77,7 @@ public:
     void squareCircle()
     {
         std::cout << "Square circle = "<<Pi*(radius*radius) << std::endl;
-        std::cout << "Square with side = " << 2 * radius + 1 << std::endl;
+        describingRectangle(radius*2, radius*2);
         std::cout << "color : " << color<<std::endl;
         setСentre();
     }
@@ -92,7 +100,7 @@ public:
     void square()
     {
         std::cout << "Square  = " << edgeSquare* edgeSquare << std::endl;
-        std::cout << "Square with side = " << edgeSquare + 1 << std::endl;
+        describingRectangle(edgeSquare, edgeSquare);
         std::cout << "color : " << color << std::endl;
         setСentre();
     }
@@ -115,7 +123,7 @@ public:
     void squareTriangle()
     {
         std::cout << "Square  = " << edgeTriangle* edgeTriangle*std::sqrt(3)/4 << std::endl;
-        std::cout << "Square with side = " << edgeTriangle + 1 << std::endl;
+        describingRectangle(edgeTriangle, edgeTriangle);
         std::cout << "color : " << color << std::endl;
         setСentre();
     }
@@ -141,7 +149,7 @@ public:
     void squareRectangle()
     {
         std::cout << "Square  = " << width * height << std::endl;
-        std::cout << "The described rectangle with  height "<< height+1<<" and width "<<width+1<< std::endl;
+        describingRectangle(width, height);
         std::cout << "color : " << color << std::endl;
         setСentre();
     }
