@@ -1,6 +1,10 @@
 ﻿#include <iostream>
-#include<string>
-#include<cmath>
+#include"Start.h"
+int main()
+{
+    choise();
+}
+/*
 class Shapes
 {
 private:
@@ -193,4 +197,5 @@ int main()
         }
     }
 }
+*/
 
