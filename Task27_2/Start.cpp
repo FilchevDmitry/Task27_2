@@ -1,16 +1,12 @@
 #include"Start.h"
 #include"Square.h"
-#include"Circle.h"
-#include"Eriangle.h"
-#include"Rectangle.h"
 #include<iostream>
 
-Circle circle;
 Square square;
-Equilateral≈riangle triangle;
-Rectangle rectangle;
 void choise() {
     int num = 0;
+    double width = 0;
+    double height = 0;
     bool end = true;
     while (end)
     {
@@ -19,20 +15,26 @@ void choise() {
         switch (num)
         {
         case 1:
-            circle.getParametrCircle();
-            circle.squareCircle();
+            square.getCentre();
+            square.colors();
+            square.squareCircle(width);
+            square.set—entre();
+            square.set—olor();
+            width *= 2;
+            square.getRectangle(width,width);
+            square.setRectangle();
             break;
         case 2:
-            square.getParametrSquare();
-            square.square();
+            square.getCentre();
+            square.colors();
             break;
         case 3:
-            triangle.getParametrTriangle();
-            triangle.squareTriangle();
+            square.getCentre();
+            square.colors();
             break;
         case 4:
-            rectangle.getParametrRectangle();
-            rectangle.squareRectangle();
+            square.getCentre();
+            square.colors();
             break;
         case 5:
             end = false;

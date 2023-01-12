@@ -3,9 +3,12 @@
 class Square : public Shapes
 {
 private:
-    double edgeSquare = 0;
+  
 public:
-    void getParametrSquare();
-    void square();
+   
+    void squareCircle(double &radius);
+    void squareTriagle(double &width);
+    void squareArea(double& width);
+    void rectangleArea(double& width, double& height);
 };
 

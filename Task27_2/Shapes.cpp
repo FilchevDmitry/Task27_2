@@ -29,15 +29,35 @@
         }
         }
     }
+    void Shapes::getCentre()
+    {
+        std::cout << "Enter the center of the shapes\n" << "X= ";
+        std::cin >> x;
+        std::cout << "Y= ";
+        std::cin >> y;
+    }
     void Shapes:: setÑentre()
     {
         std::cout << "Centre shapes X= " << x << " Y=" << y << std::endl;
     }
-    void Shapes::describingRectangle(double width, double height)
+    void Shapes::setÑolor()
+    {
+        std::cout << "Color - " << color << std::endl;
+    }
+    void Shapes::getRectangle(double &width, double &height)
     {
         srand(time(nullptr));
         if (width != height)
-            std::cout << "The described rectangle with  height " << height + std::rand() % 2 + 1 << " and width " << width + std::rand() % 2 + 1 << std::endl;
+        {
+            outHeight = height + std::rand() % 2 + 1;
+            outWidth = width + std::rand() % 2 + 1;
+        }
         else
-            std::cout << "Square with side = " << width + std::rand() % 3 + 1 << std::endl;
+            outWidth = width + std::rand() % 3 + 1;
+    }
+    void Shapes::setRectangle()
+    {
+        std::cout << "Square the described rectangle = " << outWidth * outHeight << std::endl;
+        std::cout << "Rectangle width = " << outWidth << std::endl;
+        std::cout << "Rectangle height = " << outHeight << std::endl;
     }
