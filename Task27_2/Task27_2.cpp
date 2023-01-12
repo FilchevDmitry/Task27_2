@@ -164,7 +164,7 @@ int main()
     bool end = true;
     while (end)
     {
-        std::cout << "Choose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
+        std::cout << "\nChoose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
         std::cin >> num;
         switch (num)
         {
