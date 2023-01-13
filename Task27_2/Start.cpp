@@ -27,14 +27,31 @@ void choise() {
         case 2:
             square.getCentre();
             square.colors();
+            square.squareArea(width);
+            square.set—entre();
+            square.set—olor();
+            width *= 2;
+            square.getRectangle(width, width);
+            square.setRectangle();
             break;
         case 3:
             square.getCentre();
             square.colors();
+            square.squareTriagle(width);
+            square.set—entre();
+            square.set—olor();
+            width *= 2;
+            square.getRectangle(width, width);
+            square.setRectangle();
             break;
         case 4:
             square.getCentre();
             square.colors();
+            square.rectangleArea(width, height);
+            square.set—entre();
+            square.set—olor();
+            square.getRectangle(width, width);
+            square.setRectangle();
             break;
         case 5:
             end = false;

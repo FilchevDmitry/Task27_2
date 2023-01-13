@@ -53,11 +53,22 @@
             outWidth = width + std::rand() % 2 + 1;
         }
         else
+        {
             outWidth = width + std::rand() % 3 + 1;
+            outHeight = outWidth;
+        }
     }
     void Shapes::setRectangle()
     {
-        std::cout << "Square the described rectangle = " << outWidth * outHeight << std::endl;
-        std::cout << "Rectangle width = " << outWidth << std::endl;
-        std::cout << "Rectangle height = " << outHeight << std::endl;
+        if (outWidth != outHeight)
+        {
+            std::cout << "Square the described rectangle = " << outWidth * outHeight << std::endl;
+            std::cout << "Rectangle width = " << outWidth << std::endl;
+            std::cout << "Rectangle height = " << outHeight << std::endl;
+        }
+        else
+        {
+            std::cout << "Square the described rectangle = " << outWidth * outWidth << std::endl;
+            std::cout << "Rectangle width = " << outWidth << std::endl;
+        }
     }
