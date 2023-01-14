@@ -5,11 +5,11 @@
 Square square;
 void choise() {
     int num = 0;
-    double width = 0;
-    double height = 0;
     bool end = true;
     while (end)
-    {
+    {    
+        double width = 0;
+        double height = 0;
         std::cout << "Choose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
         std::cin >> num;
         switch (num)
