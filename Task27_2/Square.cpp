@@ -11,10 +11,8 @@
         std::cin >> edgeSquare;
         colors();
     }
-    void Square::square()
+    double Square::findArea()
     {
-        std::cout << "Square  = " << edgeSquare * edgeSquare << std::endl;
-        describingRectangle(edgeSquare, edgeSquare);
-        std::cout << "color : " << color << std::endl;
-        setÑentre();
+        return edgeSquare * edgeSquare;
+       
     }

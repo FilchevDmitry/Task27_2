@@ -6,6 +6,7 @@ private:
     double width = 0;
     double height = 0;
 public:
-    void getParametrRectangle();
-    void squareRectangle();
+    
+    void setParametrRectangle();
+    double findArea();
 };

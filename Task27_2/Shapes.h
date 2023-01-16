@@ -15,6 +15,6 @@ public:
     int numColor = 0;
     std::string color;
     void colors();
-    void set—entre();
-    void describingRectangle(double width, double height);
+    void get—entre();
+    
 };

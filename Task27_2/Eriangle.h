@@ -6,6 +6,7 @@ class Equilateral≈riangle :public Shapes
 private:
     double edgeTriangle = 0;
 public:
-    void getParametrTriangle();
-    void squareTriangle();
+    void setParametrTriangle();
+    void getParametrTriangle(double& inEdgeTriangle, double& inX, double& inY);
+    double findArea();
 };

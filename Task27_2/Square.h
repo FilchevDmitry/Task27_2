@@ -6,6 +6,6 @@ private:
     double edgeSquare = 0;
 public:
     void getParametrSquare();
-    void square();
+    double findArea();
 };
 

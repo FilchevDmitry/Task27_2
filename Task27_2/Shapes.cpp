@@ -1,5 +1,6 @@
 #include<iostream>
 #include"Shapes.h"
+#include"Rectangle.h"
 
     void Shapes::colors()
     {
@@ -29,15 +30,9 @@
         }
         }
     }
-    void Shapes:: set—entre()
+    
+    void Shapes:: get—entre()
     {
         std::cout << "Centre shapes X= " << x << " Y=" << y << std::endl;
     }
-    void Shapes::describingRectangle(double width, double height)
-    {
-        srand(time(nullptr));
-        if (width != height)
-            std::cout << "The described rectangle with  height " << height + std::rand() % 2 + 1 << " and width " << width + std::rand() % 2 + 1 << std::endl;
-        else
-            std::cout << "Square with side = " << width + std::rand() % 3 + 1 << std::endl;
-    }
+

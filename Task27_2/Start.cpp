@@ -5,13 +5,15 @@
 #include"Rectangle.h"
 #include<iostream>
 
-Circle circle;
-Square square;
-Equilateral≈riangle triangle;
-Rectangle rectangle;
-void choise() {
+void choise() 
+{
     int num = 0;
     bool end = true;
+    Circle circle;
+    Square square;
+    Equilateral≈riangle triangle;
+    Rectangle rectangle;
+ 
     while (end)
     {
         std::cout << "Choose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
@@ -19,20 +21,23 @@ void choise() {
         switch (num)
         {
         case 1:
-            circle.getParametrCircle();
-            circle.squareCircle();
+
+            circle.setParametrCircle();
+            circle.findArea();
+            
             break;
         case 2:
             square.getParametrSquare();
-            square.square();
+            square.findArea();
             break;
         case 3:
             triangle.getParametrTriangle();
-            triangle.squareTriangle();
+            triangle.findArea();
             break;
         case 4:
-            rectangle.getParametrRectangle();
-            rectangle.squareRectangle();
+            
+            rectangle.setParametrRectangle();
+            rectangle.findArea();
             break;
         case 5:
             end = false;

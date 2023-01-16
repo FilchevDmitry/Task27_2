@@ -1,7 +1,7 @@
 #include"Eriangle.h"
 #include<iostream>
 
-    void Equilateral≈riangle:: getParametrTriangle()
+    void Equilateral≈riangle:: setParametrTriangle()
     {
         std::cout << "Enter the center of the equilateral eriangle\n" << "X= ";
         std::cin >> x;
@@ -11,10 +11,13 @@
         std::cin >> edgeTriangle;
         colors();
     }
-    void Equilateral≈riangle::squareTriangle()
+    void Equilateral≈riangle::getParametrTriangle(double& inEdgeTriangle, double& inX, double& inY)
     {
-        std::cout << "Square  = " << edgeTriangle * edgeTriangle * std::sqrt(3) / 4 << std::endl;
-        describingRectangle(edgeTriangle, edgeTriangle);
-        std::cout << "color : " << color << std::endl;
-        set—entre();
+        inEdgeTriangle = edgeTriangle;
+        inX = x;
+        inY = y;
+    }
+    double Equilateral≈riangle::findArea()
+    {
+        return edgeTriangle * edgeTriangle * std::sqrt(3) / 4;
     }

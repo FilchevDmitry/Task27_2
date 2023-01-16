@@ -7,7 +7,7 @@ private:
     double Pi = 3.14;
 public:
 
-    void getParametrCircle();
-
-    void squareCircle();
+    void setParametrCircle();
+    void getParamertrCircle(double &inRadius, double &inX,double& inY);
+    double findArea();
 };
