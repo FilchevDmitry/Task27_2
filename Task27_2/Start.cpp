@@ -9,7 +9,7 @@ Circle circle;
 Triangle triangle;
 Rectangle rectangle;
 Rectangle square;
-Rectangle cover;
+
 void choise() {
     int num = 0;
     bool end = true;
@@ -27,36 +27,16 @@ void choise() {
             circle.setParametrCircle();
             circle.findArea();
             circle.getParametrCircle(width, x, y);
-            Rectangle* circleArea(&width, &x, &y);
+            Rectangle* circleArea(width,x,y);
             break;
         case 2:
-            square.getCentre();
-            square.colors();
-            square.squareArea(width);
-            square.set—entre();
-            square.set—olor();
-            width *= 2;
-            square.getRectangle(width, width);
-            square.setRectangle();
+   
             break;
         case 3:
-            square.getCentre();
-            square.colors();
-            square.squareTriagle(width);
-            square.set—entre();
-            square.set—olor();
-            width *= 2;
-            square.getRectangle(width, width);
-            square.setRectangle();
+        
             break;
         case 4:
-            square.getCentre();
-            square.colors();
-            square.rectangleArea(width, height);
-            square.set—entre();
-            square.set—olor();
-            square.getRectangle(width, width);
-            square.setRectangle();
+     
             break;
         case 5:
             end = false;
