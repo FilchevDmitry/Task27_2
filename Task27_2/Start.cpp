@@ -1,8 +1,15 @@
 #include"Start.h"
-#include"Square.h"
+#include"Shapes.h"
+#include"Circle.h"
+#include"rectangle.h"
+#include"Triangle.h"
 #include<iostream>
 
-Square square;
+Circle circle;
+Triangle triangle;
+Rectangle rectangle;
+Rectangle square;
+Rectangle cover;
 void choise() {
     int num = 0;
     bool end = true;
@@ -10,19 +17,17 @@ void choise() {
     {    
         double width = 0;
         double height = 0;
+        double x = 0;
+        double y = 0;
         std::cout << "Choose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
         std::cin >> num;
         switch (num)
         {
         case 1:
-            square.getCentre();
-            square.colors();
-            square.squareCircle(width);
-            square.set—entre();
-            square.set—olor();
-            width *= 2;
-            square.getRectangle(width,width);
-            square.setRectangle();
+            circle.setParametrCircle();
+            circle.findArea();
+            circle.getParametrCircle(width, x, y);
+            Rectangle* circleArea(&width, &x, &y);
             break;
         case 2:
             square.getCentre();

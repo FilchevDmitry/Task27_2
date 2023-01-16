@@ -16,10 +16,8 @@ public:
     std::string color;
     double outWidth = 0;
     double outHeight = 0;
-    void getCentre();
     void colors();
-    void set—olor();
-    void set—entre();
-    void getRectangle(double &width, double &height);
-    void setRectangle();
+    void get—olor();
+    void get—entre();
+
 };
