@@ -1,14 +1,12 @@
 #include"Start.h"
 #include"Shapes.h"
 #include"Circle.h"
-#include"rectangle.h"
+
 #include"Triangle.h"
 #include<iostream>
 
 Circle circle;
 Triangle triangle;
-Rectangle rectangle;
-Rectangle square;
 
 void choise() {
     int num = 0;
@@ -27,7 +25,7 @@ void choise() {
             circle.setParametrCircle();
             circle.findArea();
             circle.getParametrCircle(width, x, y);
-            Rectangle* circleArea(width,x,y);
+            circle.getRectangle();
             break;
         case 2:
    

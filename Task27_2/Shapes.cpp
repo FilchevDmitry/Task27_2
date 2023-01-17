@@ -1,6 +1,6 @@
 #include<iostream>
 #include"Shapes.h"
-#include"Rectangle.h"
+
 
     void Shapes::colors()
     {
@@ -30,40 +30,59 @@
         }
         }
     }
+    Rectangle::Rectangle(double& inWidth, double& inHeight, double& inX, double& inY)
+    {
 
-    void Shapes:: get—entre()
+    }
+
+    void Shapes::get—entre()
     {
         std::cout << "Centre shapes X= " << x << " Y=" << y << std::endl;
     }
-    void Shapes::set—olor()
+    void Shapes::get—olor()
     {
         std::cout << "Color - " << color << std::endl;
     }
-    void Shapes::getRectangle(double &width, double &height)
+    Rectangle* Shapes::getRectangle()
     {
-        srand(time(nullptr));
-        if (width != height)
-        {
-            outHeight = height + std::rand() % 2 + 1;
-            outWidth = width + std::rand() % 2 + 1;
-        }
-        else
-        {
-            outWidth = width + std::rand() % 3 + 1;
-            outHeight = outWidth;
-        }
+        double posX = 0, posY = 0;
+        double width = 0, height = 0;
+        return new Rectangle(width, height, posX, posY); /* —ÚÓËÏ ÔˇÏÓÛ„ÓÎ¸ÌËÍ ÔÓ ‡ÁÏÂ‡Ï ÙË„Û˚ */
     }
-    void Shapes::setRectangle()
+
+    void Rectangle::setParametreRectangle()
     {
-        if (outWidth != outHeight)
-        {
-            std::cout << "Square the described rectangle = " << outWidth * outHeight << std::endl;
-            std::cout << "Rectangle width = " << outWidth << std::endl;
-            std::cout << "Rectangle height = " << outHeight << std::endl;
-        }
-        else
-        {
-            std::cout << "Square the described rectangle = " << outWidth * outWidth << std::endl;
-            std::cout << "Rectangle width = " << outWidth << std::endl;
-        }
+        std::cout << "Enter the center of the rectangle\n" << "X= ";
+        std::cin >> x;
+        std::cout << "Y= ";
+        std::cin >> y;
+        std::cout << "Enter the width of the rectangle = ";
+        std::cin >> width;
+        std::cout << "Enter the height of the rectangle = ";
+        std::cin >> height;
+        colors();
     }
+    void Rectangle::setParametreSquare()
+    {
+        std::cout << "Enter the center of the square\n" << "X= ";
+        std::cin >> x;
+        std::cout << "Y= ";
+        std::cin >> y;
+        std::cout << "Enter edgeSquare = ";
+        std::cin >> width;
+        colors();
+    }
+    void Rectangle::getParametreRectangle(double& inWidth, double& inHeight, double& inX, double& inY)
+    {
+        inX = x;
+        inY = y;
+        inWidth = width;
+        inHeight = height;
+    }
+    void Rectangle::getParametreSquare(double& inWidth, double& inX, double& inY)
+    {
+        inX = x;
+        inY = y;
+        inWidth = width;
+    }
+    

@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+class Rectangle;
 class Shapes
 {
 private:
@@ -19,5 +20,18 @@ public:
     void colors();
     void get—olor();
     void get—entre();
-
+    Rectangle* getRectangle();
+};
+class Rectangle : public Shapes
+{
+private:
+    double width = 0;
+    double height = 0;
+public:
+    Rectangle* getRectangle();
+    Rectangle(double& inWidth, double& inHeight, double& inX, double& inY);
+    void setParametreRectangle();
+    void setParametreSquare();
+    void getParametreRectangle(double& inWidth, double& inHeight, double& inX, double& inY);
+    void getParametreSquare(double& inWidth, double& inX, double& inY);
 };
