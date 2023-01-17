@@ -14,6 +14,9 @@ public:
     double y = 0;
     int numColor = 0;
     std::string color;
+    double outWidth = 0;
+    double outHeight = 0;
+    void getCentre();
     void colors();
     void get—entre();
     

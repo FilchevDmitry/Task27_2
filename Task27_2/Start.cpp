@@ -1,8 +1,5 @@
 #include"Start.h"
 #include"Square.h"
-#include"Circle.h"
-#include"Eriangle.h"
-#include"Rectangle.h"
 #include<iostream>
 
 void choise() 
@@ -15,7 +12,9 @@ void choise()
     Rectangle rectangle;
  
     while (end)
-    {
+    {    
+        double width = 0;
+        double height = 0;
         std::cout << "Choose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
         std::cin >> num;
         switch (num)
@@ -35,9 +34,8 @@ void choise()
             triangle.findArea();
             break;
         case 4:
-            
-            rectangle.setParametrRectangle();
-            rectangle.findArea();
+            rectangle.getParametrRectangle();
+            rectangle.squareRectangle();
             break;
         case 5:
             end = false;

@@ -1,5 +1,6 @@
 #include"Square.h"
 #include<iostream>
+#include<cmath>
 
     void Square:: getParametrSquare()
     {
