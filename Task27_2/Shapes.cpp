@@ -30,9 +30,40 @@
         }
         }
     }
-    
+
     void Shapes:: getÑentre()
     {
         std::cout << "Centre shapes X= " << x << " Y=" << y << std::endl;
     }
-
+    void Shapes::setÑolor()
+    {
+        std::cout << "Color - " << color << std::endl;
+    }
+    void Shapes::getRectangle(double &width, double &height)
+    {
+        srand(time(nullptr));
+        if (width != height)
+        {
+            outHeight = height + std::rand() % 2 + 1;
+            outWidth = width + std::rand() % 2 + 1;
+        }
+        else
+        {
+            outWidth = width + std::rand() % 3 + 1;
+            outHeight = outWidth;
+        }
+    }
+    void Shapes::setRectangle()
+    {
+        if (outWidth != outHeight)
+        {
+            std::cout << "Square the described rectangle = " << outWidth * outHeight << std::endl;
+            std::cout << "Rectangle width = " << outWidth << std::endl;
+            std::cout << "Rectangle height = " << outHeight << std::endl;
+        }
+        else
+        {
+            std::cout << "Square the described rectangle = " << outWidth * outWidth << std::endl;
+            std::cout << "Rectangle width = " << outWidth << std::endl;
+        }
+    }

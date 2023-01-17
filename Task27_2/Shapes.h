@@ -16,8 +16,8 @@ public:
     std::string color;
     double outWidth = 0;
     double outHeight = 0;
-    void getCentre();
     void colors();
+    void get—olor();
     void get—entre();
-    
+
 };
