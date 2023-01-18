@@ -1,14 +1,13 @@
 #include"Start.h"
 #include"Shapes.h"
 #include"Circle.h"
-
 #include"Triangle.h"
 #include<iostream>
 
-Circle circle;
-Triangle triangle;
-
 void choise() {
+    Circle circle;
+    Triangle triangle;
+    Rectangle *r;
     int num = 0;
     bool end = true;
     while (end)
@@ -17,6 +16,7 @@ void choise() {
         double height = 0;
         double x = 0;
         double y = 0;
+
         std::cout << "Choose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
         std::cin >> num;
         switch (num)
@@ -25,7 +25,7 @@ void choise() {
             circle.setParametrCircle();
             circle.findArea();
             circle.getParametrCircle(width, x, y);
-            circle.getRectangle();
+            r = circle.getRectangle(width, width, x, y);
             break;
         case 2:
    
@@ -44,4 +44,5 @@ void choise() {
             break;
         }
     }
+  
 }

@@ -32,7 +32,8 @@
     }
     Rectangle::Rectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
-
+        double x = inX, y = inY;
+        double width = inWidth, height = inHeight;
     }
 
     void Shapes::getСentre()
@@ -43,13 +44,16 @@
     {
         std::cout << "Color - " << color << std::endl;
     }
-    Rectangle* Shapes::getRectangle()
+    Rectangle *Shapes::getRectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
-        double posX = 0, posY = 0;
-        double width = 0, height = 0;
-        return new Rectangle(width, height, posX, posY); /* Строим прямоугольник по размерам фигуры */
+        double posX = inX, posY = inY;
+        double outWidth = inWidth, outHeight = inHeight ;
+        return new Rectangle(outWidth, outHeight, posX, posY); /* Строим прямоугольник по размерам фигуры */
     }
+    Rectangle::Rectangle()
+    {
 
+    }
     void Rectangle::setParametreRectangle()
     {
         std::cout << "Enter the center of the rectangle\n" << "X= ";

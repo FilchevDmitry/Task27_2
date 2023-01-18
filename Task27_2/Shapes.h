@@ -20,7 +20,7 @@ public:
     void colors();
     void get—olor();
     void get—entre();
-    Rectangle* getRectangle();
+    Rectangle* getRectangle(double& inWidth, double& inHeight, double& inX, double& inY);
 };
 class Rectangle : public Shapes
 {
@@ -28,7 +28,8 @@ private:
     double width = 0;
     double height = 0;
 public:
-    Rectangle* getRectangle();
+    Rectangle* getRectangle(double& inWidth, double& inHeight, double& inX, double& inY);
+    Rectangle();
     Rectangle(double& inWidth, double& inHeight, double& inX, double& inY);
     void setParametreRectangle();
     void setParametreSquare();
