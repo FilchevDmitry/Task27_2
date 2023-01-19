@@ -1,7 +1,6 @@
 #include<iostream>
 #include"Shapes.h"
 
-
     void Shapes::colors()
     {
         std::cout << "Input color : 1- Red 2-Blue 3- Green 4-None\n";
@@ -30,11 +29,7 @@
         }
         }
     }
-    Rectangle::Rectangle(double& inWidth, double& inHeight, double& inX, double& inY)
-    {
-        double x = inX, y = inY;
-        double width = inWidth, height = inHeight;
-    }
+   
 
     void Shapes::getСentre()
     {
@@ -44,11 +39,13 @@
     {
         std::cout << "Color - " << color << std::endl;
     }
-    Rectangle *Shapes::getRectangle(double& inWidth, double& inHeight, double& inX, double& inY)
+ Rectangle::Rectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
-        double posX = inX, posY = inY;
-        double outWidth = inWidth, outHeight = inHeight ;
-        return new Rectangle(outWidth, outHeight, posX, posY); /* Строим прямоугольник по размерам фигуры */
+     srand(time(nullptr));
+     x = inX;
+     y = inY;
+     width = inWidth+std::rand() % 2 + 1;
+     height = inHeight+ std::rand() % 2 + 1;
     }
     Rectangle::Rectangle()
     {
@@ -83,10 +80,4 @@
         inWidth = width;
         inHeight = height;
     }
-    void Rectangle::getParametreSquare(double& inWidth, double& inX, double& inY)
-    {
-        inX = x;
-        inY = y;
-        inWidth = width;
-    }
-    
+

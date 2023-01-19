@@ -7,7 +7,7 @@
 void choise() {
     Circle circle;
     Triangle triangle;
-    Rectangle *r;
+    Rectangle outRectangle;
     int num = 0;
     bool end = true;
     while (end)
@@ -25,7 +25,8 @@ void choise() {
             circle.setParametrCircle();
             circle.findArea();
             circle.getParametrCircle(width, x, y);
-            r = circle.getRectangle(width, width, x, y);
+            outRectangle=Rectangle(width, width, x, y);
+
             break;
         case 2:
    
