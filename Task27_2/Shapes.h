@@ -15,12 +15,10 @@ public:
     double y = 0;
     int numColor = 0;
     std::string color;
-    double outWidth = 0;
-    double outHeight = 0;
     void colors();
     void get—olor();
     void get—entre();
-    
+    Rectangle* getRectangle(double& inWidth, double& inHeight, double& inX, double& inY);
 };
 class Rectangle : public Shapes
 {

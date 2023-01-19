@@ -29,15 +29,22 @@
         }
         }
     }
-   
-
-    void Shapes::getÑentre()
+       void Shapes::getÑentre()
     {
         std::cout << "Centre shapes X= " << x << " Y=" << y << std::endl;
     }
     void Shapes::getÑolor()
     {
         std::cout << "Color - " << color << std::endl;
+    }
+    Rectangle* Shapes::getRectangle(double& inWidth, double& inHeight, double& inX, double& inY)
+    {
+        srand(time(nullptr));
+        x = inX;
+        y = inY;
+        double width = inWidth + std::rand() % 2 + 1;
+        double height = inHeight + std::rand() % 2 + 1;
+        return new Rectangle(width, height, x, y); /* Ñòğîèì ïğÿìîóãîëüíèê ïî ğàçìåğàì ôèãóğû */
     }
  Rectangle::Rectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
@@ -80,4 +87,5 @@
         inWidth = width;
         inHeight = height;
     }
+
 
