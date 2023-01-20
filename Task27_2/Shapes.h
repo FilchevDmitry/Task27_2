@@ -18,6 +18,7 @@ public:
     void colors();
     void get—olor();
     void get—entre();
+    void print();
     Rectangle* getRectangle(double& inWidth, double& inHeight, double& inX, double& inY);
 };
 class Rectangle : public Shapes
@@ -29,7 +30,6 @@ public:
     Rectangle();
     Rectangle(double& inWidth, double& inHeight, double& inX, double& inY);
     void setParametreRectangle();
-    void setParametreSquare();
     void getParametreRectangle(double& inWidth, double& inHeight, double& inX, double& inY);
-    
+    double findArea();
 };

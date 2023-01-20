@@ -29,7 +29,7 @@
         }
         }
     }
-       void Shapes::getСentre()
+    void Shapes::getСentre()
     {
         std::cout << "Centre shapes X= " << x << " Y=" << y << std::endl;
     }
@@ -37,22 +37,31 @@
     {
         std::cout << "Color - " << color << std::endl;
     }
+    void Shapes::print()
+    {
+
+    }
     Rectangle* Shapes::getRectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
-        srand(time(nullptr));
-        x = inX;
-        y = inY;
-        double width = inWidth + std::rand() % 2 + 1;
-        double height = inHeight + std::rand() % 2 + 1;
-        return new Rectangle(width, height, x, y); /* Строим прямоугольник по размерам фигуры */
+
+        return new Rectangle(inWidth, inHeight, inX, inY); /* Строим прямоугольник по размерам фигуры */
     }
  Rectangle::Rectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
      srand(time(nullptr));
      x = inX;
      y = inY;
-     width = inWidth+std::rand() % 2 + 1;
-     height = inHeight+ std::rand() % 2 + 1;
+     if (inWidth == inHeight)
+     {
+         width = inWidth + std::rand() % 2 + 1;
+         height = width;
+     }
+     else
+     {
+         width = inWidth + std::rand() % 2 + 1;
+         height = inHeight + std::rand() % 2 + 1;
+     }
+
     }
     Rectangle::Rectangle()
     {
@@ -70,22 +79,16 @@
         std::cin >> height;
         colors();
     }
-    void Rectangle::setParametreSquare()
-    {
-        std::cout << "Enter the center of the square\n" << "X= ";
-        std::cin >> x;
-        std::cout << "Y= ";
-        std::cin >> y;
-        std::cout << "Enter edgeSquare = ";
-        std::cin >> width;
-        colors();
-    }
     void Rectangle::getParametreRectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
         inX = x;
         inY = y;
         inWidth = width;
         inHeight = height;
+    }
+    double Rectangle::findArea()
+    {
+        return width * height;
     }
 
 

@@ -7,16 +7,17 @@
 void choise() {
     Circle circle;
     Triangle triangle;
-    Rectangle* outRectangle=new Rectangle();
+    Rectangle rectangle;
     int num = 0;
     bool end = true;
     while (end)
-    {    
+    {   
+        Rectangle* outRectangle=new Rectangle(); 
         double width = 0;
         double height = 0;
         double x = 0;
         double y = 0;
-
+        double temp=0;
         std::cout << "Choose\n1-circle\n2-square\n3-triangle\n4-rectangle\n5-exit\n";
         std::cin >> num;
         switch (num)
@@ -25,7 +26,8 @@ void choise() {
             circle.setParametrCircle();
             circle.findArea();
             circle.getParametrCircle(width, x, y);
-            outRectangle=circle.getRectangle(width, width, x, y);
+            temp = 2 * width;
+            outRectangle=circle.getRectangle(temp, temp, x, y);
 
             break;
         case 2:
@@ -44,6 +46,7 @@ void choise() {
             std::cout << "Error" << std::endl;
             break;
         }
+        delete outRectangle;
     }
   
 }
