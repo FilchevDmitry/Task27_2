@@ -37,13 +37,9 @@
     {
         std::cout << "Color - " << color << std::endl;
     }
-    void Shapes::print()
-    {
 
-    }
     Rectangle* Shapes::getRectangle(double& inWidth, double& inHeight, double& inX, double& inY)
     {
-
         return new Rectangle(inWidth, inHeight, inX, inY); /* Строим прямоугольник по размерам фигуры */
     }
  Rectangle::Rectangle(double& inWidth, double& inHeight, double& inX, double& inY)
@@ -89,6 +85,11 @@
     double Rectangle::findArea()
     {
         return width * height;
+    }
+    void Rectangle::printParametr()
+    {
+        std::cout<< "The center of the describing rectangle X=" << x << " Y=" << y << std::endl;
+        std::cout << "Width = " << width << " Heigth = " << height << std::endl;
     }
 
 

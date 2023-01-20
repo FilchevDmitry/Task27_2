@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Shapes.cpp" />
+    <ClCompile Include="Square.cpp" />
     <ClCompile Include="Start.cpp" />
     <ClCompile Include="Task27_2.cpp" />
     <ClCompile Include="Triangle.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Shapes.h" />
+    <ClInclude Include="Square.h" />
     <ClInclude Include="Start.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
